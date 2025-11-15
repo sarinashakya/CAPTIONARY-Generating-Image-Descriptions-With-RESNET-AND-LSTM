@@ -29,7 +29,7 @@ After downloading:
 
 - Extract images into dataset/Images/
 
-- Extract captions file into dataset/captions
+- Extract captions file into dataset/captions/
 
 Only a few sample images are included here.
 
