@@ -11,11 +11,11 @@ To create a system that can automatically generate descriptive captions for imag
 
 ## Technology Used
 
--Python (NumPy, TensorFlow, Keras)
+- Python (NumPy, TensorFlow, Keras)
 
--RESNET
+- RESNET
 
--LSTM
+- LSTM
 
 ## Dataset
 
@@ -27,32 +27,33 @@ Download from:
 
 After downloading:
 
--Extract images into dataset/Images/
+- Extract images into dataset/Images/
 
--Extract captions file into dataset/captions
+- Extract captions file into dataset/captions
 
 Only a few sample images are included here.
 
 ## How to Run
 
-Install dependencies:
+1. Install required libraries:
+   ```bash
+   pip install -r requirements.txt
 
-pip install -r requirements.txt
 
 ## Working Principle
 
--Image features are extracted using RESNET.
+1. Image features are extracted using RESNET.
 
--Captions are tokenized and processed for sequence learning.
+2. Captions are tokenized and processed for sequence learning.
 
--LSTM is trained on image features + caption sequences.
+3. LSTM is trained on image features + caption sequences.
 
--The trained model can generate captions for new images.
+4. The trained model can generate captions for new images.
 
 ## About
 
--Sample images are included for demonstration purposes.
+- Sample images are included for demonstration purposes.
 
--The full dataset can be downloaded from the link above.
+- The full dataset can be downloaded from the link above.
 
-This project is suitable for learning image captioning with CNN+LSTM models.
+- This project is suitable for learning image captioning with CNN+LSTM models.
