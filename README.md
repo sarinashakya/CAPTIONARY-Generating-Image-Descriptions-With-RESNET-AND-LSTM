@@ -47,7 +47,7 @@ The dataset is not included in this repository due to its large size.
 
 ```bash
 pip install -r requirements.txt
-
+````
 
 3. Download the MS COCO 2014 dataset and place it in the project directory.
 
@@ -55,6 +55,7 @@ pip install -r requirements.txt
 
 ```bash
 python app.py
+````
 
 ## Working Principle
 
