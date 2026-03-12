@@ -19,26 +19,42 @@ To create a system that can automatically generate descriptive captions for imag
 
 ## Dataset
 
-This project uses the Flickr8k dataset.
-Because the dataset is large, it is not included in this repository.
+This project uses the **MS COCO 2014 dataset** for training and testing the image captioning model.
+The dataset is not included in this repository due to its large size.
 
-Download from:
-[Flickr8k on Kaggle](https://www.kaggle.com/datasets/aladdinpersson/flickr8kimagescaptions)
+### Steps
 
-After downloading:
+1. Download the **MS COCO 2014 dataset** from the official website:
+   https://cocodataset.org/#download
 
-- Extract images into dataset/Images/
+2. Download the following files:
 
-- Extract captions file into dataset/captions/
+   * Training images (train2014.zip)
+   * Validation images (val2014.zip)
+   * Captions annotations (captions_train-val2014.zip)
 
-Only a few sample images are included here.
+3. Extract the downloaded files.
+
+4. Place the dataset folder in the root directory of the project.
+
+5. After placing the dataset in the correct directory, run the project normally.
 
 ## How to Run
 
-1. Install required libraries:
-   ```bash
-   pip install -r requirements.txt
+1. Clone the repository.
 
+2. Install required libraries:
+
+```bash
+pip install -r requirements.txt
+
+
+3. Download the MS COCO 2014 dataset and place it in the project directory.
+
+4. Run the application:
+
+```bash
+python app.py
 
 ## Working Principle
 
@@ -51,8 +67,6 @@ Only a few sample images are included here.
 4. The trained model can generate captions for new images.
 
 ## About
-
-- Sample images are included for demonstration purposes.
 
 - The full dataset can be downloaded from the link above.
 
