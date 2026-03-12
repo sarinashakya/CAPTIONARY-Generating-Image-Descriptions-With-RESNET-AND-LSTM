@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Captioning</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-wrapper">
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <a href="#" class="logo">Captionary</a>
+      <!--<div class="product-name">
+        <span class="product-name-inner">Captionary</span>
+      </div>-->
+      
+      <nav class="nav">
+        <div class="nav-center">
+          <a href="#home" class="active">Home</a>
+          <a href="#sample" >Sample Predictions</a>
+        </div>
+      </nav>
+      </div>
+    </header>
 
+    <section class="home" id="home">
+    <div class="super-container">
+      <form
+      method="post"
+      enctype="multipart/form-data"
+      class="parent-upload-container"
+      >
+      <h2>Upload an Image to Generate Caption</h2><br>
+      <div class="upload-container">
+        <img
+          src="{{ url_for('static', filename='images/upload.png') }}"
+          alt="Upload"
+          class="upload-image"
+          onclick="document.getElementById('file-input').click();"
+        />
+        <input type="file" id="file-input" class="file-input" name="file" />
+      </div>
+
+
+      
+      <input type="submit" value="Generate Caption" class="upload-btn" />
+    </form>
+    <div class="generation-div">
+        <img class="preview-img" src="" id="preview" alt="">
+        {% if file_path %}
+        <img class="uploaded-image" src="{{file_path}}" id="preview" alt="">
+    <div class="generation-container">
+        <p>{{ caption }}</p>
+      </div>
+  
+        {% endif %}
+    </div>
+    </div>
+    
+
+    <script>
+      document
+        .getElementById("file-input")
+        .addEventListener("change", function (event) {
+        const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const preview = document.getElementById('preview');
+                preview.src = e.target.result;
+                preview.style.display = 'block'
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
+
+    </section>
+
+    <section class="sample" id="sample">
+    <h2 class="heading">Sample Predictions</h2>
+
+    <div class="samples">
+      <img src="{{ url_for('static', filename='images/sample1.png') }}" alt="">
+      <img src="{{ url_for('static', filename='images/sample2.png') }}" alt="">
+    </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
