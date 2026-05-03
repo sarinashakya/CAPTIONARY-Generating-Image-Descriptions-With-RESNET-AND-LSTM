@@ -9,6 +9,8 @@ Here is how it looks:
 
 ![Alt text](demo.png)
 
+![Alt text](demo1.png)
+
 ## Objective
 
 To create a system that can automatically generate descriptive captions for images using deep learning techniques.
