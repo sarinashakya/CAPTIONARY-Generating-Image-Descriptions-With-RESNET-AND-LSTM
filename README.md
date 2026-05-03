@@ -5,6 +5,9 @@
 This project generates natural language descriptions for images using deep learning.
 It combines a RESNET CNN for image feature extraction and an LSTM network for sequence generation to produce captions.
 
+Here is how it looks:
+![Alt text](demo.png)
+
 ## Objective
 
 To create a system that can automatically generate descriptive captions for images using deep learning techniques.
