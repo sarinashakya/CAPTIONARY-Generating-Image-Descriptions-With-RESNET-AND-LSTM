@@ -6,6 +6,7 @@ This project generates natural language descriptions for images using deep learn
 It combines a RESNET CNN for image feature extraction and an LSTM network for sequence generation to produce captions.
 
 Here is how it looks:
+
 ![Alt text](demo.png)
 
 ## Objective
